@@ -1,0 +1,45 @@
+@import "/src/styles/breakPoints";
+@import "/src/styles/mixins";
+
+.container {
+  width: 87.5%;
+  text-align: center;
+  border: 1px solid #eaeaea;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+
+  @include respond-above("md") {
+    padding: 32px;
+    width: 600px;
+  }
+
+  .startChatButton {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    font-size: 15px;
+    color: white;
+    background-color: #0070f3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    @include respond-above("md") {
+      font-size: 20px;
+      margin-top: 32px;
+      padding: 15px 40px;
+    }
+
+    @media screen and (max-width: 300px) {
+      font-size: 14px;
+    }
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}

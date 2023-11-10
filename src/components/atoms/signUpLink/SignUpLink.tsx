@@ -1,7 +1,7 @@
 import Link from "next/link";
-import styles from "./SignUp.module.scss";
+import styles from "./SignUpLink.module.scss";
 
-function SignUp(): JSX.Element {
+function SignUpLink(): JSX.Element {
   return (
     <>
       <Link href="/signUpPage" className={styles.link}>
@@ -11,4 +11,4 @@ function SignUp(): JSX.Element {
   );
 }
 
-export default SignUp;
+export default SignUpLink;

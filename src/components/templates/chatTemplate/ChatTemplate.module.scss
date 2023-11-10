@@ -1,0 +1,42 @@
+@import "/src/styles/breakPoints";
+@import "/src/styles/mixins";
+
+.container {
+  background-color: rgb(35, 35, 35);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #717171;
+  }
+
+  .wrapper {
+    width: 90%;
+    height: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    @include respond-above("sm") {
+    }
+    @include respond-above("md") {
+    }
+    @include respond-above("lg") {
+    }
+    @include respond-above("xl") {
+      width: 1000px;
+    }
+  }
+}

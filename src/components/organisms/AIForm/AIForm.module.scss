@@ -1,0 +1,27 @@
+@import "/src/styles/breakPoints";
+@import "/src/styles/mixins";
+
+.container {
+  position: fixed;
+  width: fit-content;
+  bottom: 3%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 90%;
+  transition: bottom 0.3s ease;
+
+  @include respond-above("sm") {
+  }
+  @include respond-above("md") {
+    bottom: 0;
+  }
+  @include respond-above("lg") {
+  }
+  @include respond-above("xl") {
+    width: 1000px;
+  }
+
+  &.scrollbar {
+    left: calc(50% - 6px);
+  }
+}

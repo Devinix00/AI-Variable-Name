@@ -1,13 +1,13 @@
-import SignIn from "@/components/atoms/signIn/SignIn";
+import SignInLink from "@/components/atoms/signInLink/SignInLink";
 import styles from "./AuthLinks.module.scss";
-import SignUp from "@/components/atoms/signUp/SignUp";
+import SignUpLink from "@/components/atoms/signUpLink/SignUpLink";
 
 function AuthLinks(): JSX.Element {
   return (
     <>
       <div className={styles.container}>
-        <SignIn />
-        <SignUp />
+        <SignInLink />
+        <SignUpLink />
       </div>
     </>
   );

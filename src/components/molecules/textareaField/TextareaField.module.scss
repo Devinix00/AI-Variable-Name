@@ -1,0 +1,26 @@
+@import "/src/styles/breakPoints";
+@import "/src/styles/mixins";
+
+.container {
+  position: relative;
+
+  .button {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    transition: right 0.3s ease;
+
+    &.positionRight {
+      right: 16px;
+    }
+
+    @include respond-above("sm") {
+    }
+    @include respond-above("md") {
+    }
+    @include respond-above("lg") {
+    }
+    @include respond-above("xl") {
+    }
+  }
+}

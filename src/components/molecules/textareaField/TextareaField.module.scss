@@ -9,6 +9,7 @@
     bottom: 0px;
     right: 0px;
     transition: right 0.3s ease;
+    font-size: 12px;
 
     &.positionRight {
       right: 16px;
@@ -17,10 +18,14 @@
     @include respond-above("sm") {
     }
     @include respond-above("md") {
+      font-size: 14px;
     }
     @include respond-above("lg") {
     }
     @include respond-above("xl") {
+    }
+    @media screen and (max-width: 300px) {
+      font-size: 10px;
     }
   }
 }

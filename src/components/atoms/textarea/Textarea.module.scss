@@ -8,6 +8,7 @@
   max-height: 200px;
   font-size: 18px;
   padding: 8px;
+  padding-right: 30%;
   background-color: rgb(222, 222, 222);
   resize: none;
   border: none;
@@ -18,15 +19,22 @@
 
   @include respond-above("sm") {
     font-size: 15px;
+    padding-right: 30%;
   }
   @include respond-above("md") {
     font-size: 16px;
+    padding-right: 25%;
   }
   @include respond-above("lg") {
     font-size: 17px;
+    padding-right: 20%;
   }
   @include respond-above("xl") {
     font-size: 18px;
+    padding-right: 15%;
+  }
+  @media screen and (max-width: 300px) {
+    padding-right: 37.5%;
   }
 
   &::-webkit-scrollbar {

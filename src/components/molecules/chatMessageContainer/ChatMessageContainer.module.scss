@@ -1,0 +1,161 @@
+@import "/src/styles/breakPoints";
+@import "/src/styles/mixins";
+
+.container {
+  width: 100%;
+  height: fit-content;
+
+  @mixin commonContainer() {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    @include respond-above("sm") {
+      margin-bottom: 6px;
+    }
+    @include respond-above("md") {
+      margin-bottom: 7px;
+    }
+    @include respond-above("lg") {
+      margin-bottom: 8.5px;
+    }
+    @include respond-above("xl") {
+      margin-bottom: 10px;
+    }
+  }
+
+  @mixin commonImage() {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 600;
+
+    @include respond-above("sm") {
+      width: 45px;
+      height: 45px;
+      font-size: 13px;
+    }
+    @include respond-above("md") {
+      width: 50px;
+      height: 50px;
+      font-size: 14px;
+    }
+    @include respond-above("lg") {
+      width: 55px;
+      height: 55px;
+      font-size: 15px;
+    }
+    @include respond-above("xl") {
+      width: 60px;
+      height: 60px;
+      font-size: 16px;
+    }
+  }
+
+  @mixin commonMessage() {
+    font-size: 12px;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 6px;
+    max-width: 82.5%;
+    min-height: 40px;
+
+    @include respond-above("sm") {
+      font-size: 13px;
+      padding: 7px;
+    }
+    @include respond-above("md") {
+      font-size: 14px;
+      padding: 8px;
+    }
+    @include respond-above("lg") {
+      font-size: 15px;
+      padding: 9px;
+    }
+    @include respond-above("xl") {
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
+
+  .userContainer {
+    @include commonContainer();
+    flex-direction: row-reverse;
+
+    .userImage {
+      @include commonImage();
+      background-color: rgb(226, 226, 226);
+      margin-left: 10px;
+
+      @include respond-above("sm") {
+        margin-left: 12.5px;
+      }
+      @include respond-above("md") {
+        margin-left: 15px;
+      }
+      @include respond-above("lg") {
+        margin-left: 17.5px;
+      }
+      @include respond-above("xl") {
+        margin-left: 20px;
+      }
+    }
+
+    .messageContainer {
+      display: flex;
+      flex-direction: row-reverse;
+      width: 100%;
+
+      .message {
+        @include commonMessage();
+      }
+    }
+  }
+
+  .aiContainer {
+    @include commonContainer();
+
+    @include respond-above("sm") {
+    }
+    @include respond-above("md") {
+    }
+    @include respond-above("lg") {
+    }
+    @include respond-above("xl") {
+    }
+
+    .userImage {
+      @include commonImage();
+      background-color: rgb(169, 169, 212);
+      margin-right: 10px;
+
+      @include respond-above("sm") {
+        margin-right: 12.5px;
+      }
+      @include respond-above("md") {
+        margin-right: 15px;
+      }
+      @include respond-above("lg") {
+        margin-right: 17.5px;
+      }
+      @include respond-above("xl") {
+        margin-right: 20px;
+      }
+    }
+
+    .messageContainer {
+      display: flex;
+      width: 100%;
+
+      .message {
+        @include commonMessage();
+        justify-content: flex-start;
+      }
+    }
+  }
+}

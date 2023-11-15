@@ -5,6 +5,7 @@ import styles from "./TextareaField.module.scss";
 import SendIcon from "@mui/icons-material/Send";
 import { Button } from "@mui/material";
 import useTextareaStore from "@/stores/useTextareaStore/useTextareaStore";
+import useLoadingStore from "@/stores/useLoadingStore/useLoadingStore";
 
 interface IProps {
   inputValue: string;
@@ -17,7 +18,10 @@ function TextareaField({
   setInputValue,
   onKeyDown,
 }: IProps): JSX.Element {
+  const { isLoading } = useLoadingStore();
   const { scrollbar } = useTextareaStore();
+
+  const disabledButton = isLoading === true;
   const buttonClass = `${styles.button} ${
     scrollbar ? styles.positionRight : null
   }`;
@@ -36,6 +40,7 @@ function TextareaField({
           endIcon={<SendIcon />}
           className={buttonClass}
           type="submit"
+          disabled={disabledButton}
         >
           Send
         </Button>

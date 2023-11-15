@@ -7,6 +7,7 @@ import useTextarea from "@/hooks/useTextarea/useTextarea";
 import useSubmit from "@/hooks/useSubmit/useSubmit";
 import SelectCase from "@/components/molecules/selectCase/SelectCase";
 import usePressEnter from "@/hooks/usePressEnter/usePressEnter";
+import DeveloperInfo from "@/components/molecules/developerInfo/DeveloperInfo";
 
 interface IProps {
   scrollbar: boolean;
@@ -17,6 +18,7 @@ function AIForm({ scrollbar }: IProps): JSX.Element {
   const [option, setOption] = useState("camelCase");
   const [isClicked, setIsClicked] = useState<boolean>(false);
   useTextarea({ inputValue, setInputValue });
+
   const { handleSubmit } = useSubmit({
     inputValue,
     setInputValue,
@@ -49,6 +51,7 @@ function AIForm({ scrollbar }: IProps): JSX.Element {
           setInputValue={setInputValue}
           onKeyDown={handleKeyPress}
         />
+        <DeveloperInfo />
       </form>
     </>
   );

@@ -3,6 +3,7 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import styles from "./SelectCase.module.scss";
 import useSelectedCase from "@/hooks/useSelectCase/useSelectCase";
+import useLoadingStore from "@/stores/useLoadingStore/useLoadingStore";
 
 interface IProps {
   option: string;
@@ -22,12 +23,16 @@ function SelectCase({
     setIsClicked,
     setOption,
   });
+  const { isLoading } = useLoadingStore();
 
   const listClass = `${styles.list} ${isClicked ? null : styles.none}`;
 
   return (
     <>
       <div className={styles.container}>
+        {!isLoading ? (
+          <div className={styles.loadingText}>Loading...</div>
+        ) : null}
         <ul>
           <div onClick={handleClick} className={styles.selectedCase}>
             {option}↑

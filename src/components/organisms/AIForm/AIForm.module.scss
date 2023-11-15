@@ -4,7 +4,7 @@
 .container {
   position: fixed;
   width: fit-content;
-  bottom: 3%;
+  bottom: 0;
   left: 50%;
   transform: translate(-50%);
   width: 90%;
@@ -13,7 +13,6 @@
   @include respond-above("sm") {
   }
   @include respond-above("md") {
-    bottom: 0;
   }
   @include respond-above("lg") {
   }

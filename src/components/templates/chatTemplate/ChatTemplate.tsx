@@ -1,6 +1,5 @@
 "use client";
 
-import Sidebar from "@/components/organisms/sidebar/Sidebar";
 import styles from "./ChatTemplate.module.scss";
 import AIForm from "@/components/organisms/AIForm/AIForm";
 import { useRef, useState } from "react";
@@ -16,7 +15,6 @@ function ChatTemplate(): JSX.Element {
     <>
       <div ref={containerRef} className={styles.container}>
         <div className={styles.wrapper}>
-          {/* <Sidebar /> */}
           <ChatRoom />
           <AIForm scrollbar={scrollbar} />
         </div>

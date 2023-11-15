@@ -2,9 +2,38 @@
 @import "/src/styles/mixins";
 
 .container {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 5px;
+  background-color: #232323;
+
+  .loadingText {
+    width: fit-content;
+    position: absolute;
+    right: 0;
+    color: rgb(224, 224, 224);
+    font-weight: 600;
+    font-size: 12px;
+
+    @include respond-above("sm") {
+      font-size: 13px;
+    }
+    @include respond-above("md") {
+      font-size: 14px;
+    }
+    @include respond-above("lg") {
+      font-size: 15px;
+    }
+    @include respond-above("xl") {
+      font-size: 16px;
+    }
+    @media screen and (max-width: 315px) {
+      bottom: 20px;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
 
   ul {
     position: relative;

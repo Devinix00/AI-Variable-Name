@@ -4,15 +4,23 @@
 .container {
   width: 100%;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-bottom: 165px;
 
   @include respond-above("sm") {
+    margin-top: 20px;
+    margin-bottom: 170px;
   }
   @include respond-above("md") {
+    margin-top: 25px;
+    margin-bottom: 200px;
   }
   @include respond-above("lg") {
+    margin-top: 30px;
+    margin-bottom: 210px;
   }
   @include respond-above("xl") {
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 210px;
   }
 }

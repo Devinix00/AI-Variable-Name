@@ -15,23 +15,23 @@
 .chatTitle {
   color: rgb(224, 224, 224);
   text-align: center;
-  padding-top: 10px;
+  padding-top: 20px;
   font-size: 24px;
 
   @include respond-above("sm") {
-    padding-top: 12.5px;
+    padding-top: 20px;
     font-size: 24px;
   }
   @include respond-above("md") {
-    padding-top: 15px;
+    padding-top: 25px;
     font-size: 26px;
   }
   @include respond-above("lg") {
-    padding-top: 17.5px;
+    padding-top: 30px;
     font-size: 28px;
   }
   @include respond-above("xl") {
-    padding-top: 20px;
+    padding-top: 40px;
     font-size: 32px;
   }
 }

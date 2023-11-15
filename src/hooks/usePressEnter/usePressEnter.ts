@@ -31,6 +31,7 @@ function usePressEnter({
       handleSubmit(e as unknown as React.FormEvent<HTMLFormElement>);
     }
   };
+  
   return {
     handleKeyPress,
   };

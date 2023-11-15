@@ -1,0 +1,131 @@
+@import "/src/styles/breakPoints";
+@import "/src/styles/mixins";
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  ul {
+    position: relative;
+    background-color: #a0c4d5;
+    width: 80px;
+    height: 20px;
+    padding: 8px;
+    font-weight: 600;
+    cursor: pointer;
+
+    @include respond-above("sm") {
+      width: 90px;
+      height: 22.5px;
+    }
+    @include respond-above("md") {
+      width: 100px;
+      height: 25px;
+    }
+    @include respond-above("lg") {
+      width: 110px;
+      height: 27.5px;
+    }
+    @include respond-above("xl") {
+      width: 120px;
+      height: 30px;
+    }
+
+    .selectedCase {
+      font-size: 12px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      @include respond-above("sm") {
+        font-size: 13px;
+      }
+      @include respond-above("md") {
+        font-size: 14px;
+      }
+      @include respond-above("lg") {
+        font-size: 15px;
+      }
+      @include respond-above("xl") {
+        font-size: 16px;
+      }
+    }
+
+    .optionList {
+      display: flex;
+      flex-direction: column-reverse;
+      position: absolute;
+      left: 0;
+      bottom: 100%;
+
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        padding: 8px;
+        height: 20px;
+        background-color: white;
+        border-bottom: 0.5px solid #232323;
+        font-weight: 600;
+        font-size: 12px;
+        -o-appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+
+        @include respond-above("sm") {
+          width: 90px;
+          height: 22.5px;
+          font-size: 13px;
+        }
+        @include respond-above("md") {
+          width: 100px;
+          height: 25px;
+          font-size: 14px;
+        }
+        @include respond-above("lg") {
+          width: 110px;
+          height: 27.5px;
+          font-size: 15px;
+        }
+        @include respond-above("xl") {
+          width: 120px;
+          height: 30px;
+          font-size: 16px;
+        }
+
+        &:hover {
+          background-color: #a0c4d5;
+        }
+
+        &.none {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .text {
+    color: rgb(224, 224, 224);
+    font-weight: 600;
+    font-size: 12px;
+
+    @include respond-above("sm") {
+      font-size: 13px;
+    }
+    @include respond-above("md") {
+      font-size: 14px;
+    }
+    @include respond-above("lg") {
+      font-size: 15px;
+    }
+    @include respond-above("xl") {
+      font-size: 16px;
+    }
+  }
+}

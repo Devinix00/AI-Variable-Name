@@ -1,14 +1,18 @@
 import useTextareaStore from "@/stores/useTextareaStore/useTextareaStore";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 
 interface IUseTextarea {
-  value: string;
+  inputValue: string;
   textareaRef: React.RefObject<HTMLTextAreaElement>;
   handleChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
-function useTextarea(): IUseTextarea {
-  const [value, setValue] = useState("");
+interface IProps {
+  inputValue: string;
+  setInputValue: (value: string) => void;
+}
+
+function useTextarea({ inputValue, setInputValue }: IProps): IUseTextarea {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const { setScrollbarTrue, setScrollbarFalse } = useTextareaStore();
 
@@ -26,13 +30,13 @@ function useTextarea(): IUseTextarea {
         setScrollbarFalse();
       }
     }
-  }, [value]);
+  }, [inputValue]);
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
-    setValue(e.target.value);
+    setInputValue(e.target.value);
   };
 
-  return { value, textareaRef, handleChange };
+  return { inputValue, textareaRef, handleChange };
 }
 
 export default useTextarea;

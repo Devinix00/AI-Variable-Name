@@ -30,7 +30,7 @@ function SelectCase({
   return (
     <>
       <div className={styles.container}>
-        {!isLoading ? (
+        {isLoading ? (
           <div className={styles.loadingText}>Loading...</div>
         ) : null}
         <ul>

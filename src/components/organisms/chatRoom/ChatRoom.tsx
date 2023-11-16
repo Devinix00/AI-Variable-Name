@@ -6,7 +6,7 @@ import ChatContainer from "@/components/molecules/chatContainer/ChatContainer";
 function ChatRoom(): JSX.Element {
   return (
     <>
-      <Title title="AI Naming Service!" type="chat" />
+      <Title title="AI Variable Naming!" type="chat" />
       <div className={styles.container}>
         <ChatMessageContainer type="initialAi" who="AI" />
         <ChatContainer />

@@ -51,7 +51,7 @@ function AIForm({ scrollbar }: IProps): JSX.Element {
           setInputValue={setInputValue}
           onKeyDown={handleKeyPress}
         />
-        <DeveloperInfo />
+        <DeveloperInfo type="chat" />
       </form>
     </>
   );

@@ -18,6 +18,8 @@ function useTextarea({ inputValue, setInputValue }: IProps): IUseTextarea {
 
   useEffect(() => {
     const textarea = textareaRef.current;
+    textarea?.focus();
+    
     if (textarea) {
       textarea.style.height = "auto";
       textarea.style.height = `${textarea.scrollHeight}px`;

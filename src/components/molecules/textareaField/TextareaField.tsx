@@ -21,7 +21,7 @@ function TextareaField({
   const { isLoading } = useLoadingStore();
   const { scrollbar } = useTextareaStore();
 
-  const disabledButton = isLoading === true;
+  const disabledButton = isLoading === true || inputValue === "";
   const buttonClass = `${styles.button} ${
     scrollbar ? styles.positionRight : null
   }`;

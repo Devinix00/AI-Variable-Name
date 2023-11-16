@@ -2,7 +2,8 @@
 @import "/src/styles/mixins";
 
 .homeTitle {
-  font-size: 14px;
+  font-size: 18px;
+
   @include respond-above("md") {
     font-size: 32px;
   }

@@ -1,7 +1,7 @@
 import HomeIntro from "@/components/molecules/HomeIntro/HomeIntro";
 import styles from "./HomeContent.module.scss";
 import Link from "next/link";
-import AuthLinks from "@/components/molecules/authLinks/AuthLinks";
+import DeveloperInfo from "@/components/molecules/developerInfo/DeveloperInfo";
 
 function HomeContent(): JSX.Element {
   return (
@@ -11,7 +11,7 @@ function HomeContent(): JSX.Element {
         <Link href="/chat" className={styles.startChatButton}>
           Start Chatting
         </Link>
-        <AuthLinks />
+        <DeveloperInfo type="home" />
       </div>
     </>
   );

@@ -32,11 +32,20 @@ function useSubmit({
     setisLoadingTrue();
 
     setInputValue("");
+
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+    if (!apiUrl) {
+      console.error("API URL is not defined in environment variables");
+      alert("API URL is missing. Please check your environment configuration.");
+      setisLoadingFalse();
+      return;
+    }
+
     addChatItem({ type: "user", message: inputValue });
     setOption("camelCase");
 
     try {
-      const response = await fetch(process.env.NEXT_PUBLIC_API_URL, {
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

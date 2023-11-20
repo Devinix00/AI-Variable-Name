@@ -39,20 +39,22 @@ function AIForm({ scrollbar }: IProps): JSX.Element {
 
   return (
     <>
-      <form onSubmit={handleSubmit} className={containerClass}>
-        <SelectCase
-          option={option}
-          setOption={setOption}
-          isClicked={isClicked}
-          setIsClicked={setIsClicked}
-        />
-        <TextareaField
-          inputValue={inputValue}
-          setInputValue={setInputValue}
-          onKeyDown={handleKeyPress}
-        />
-        <DeveloperInfo type="chat" />
-      </form>
+      <div className={styles.backgroundContainer}>
+        <form onSubmit={handleSubmit} className={containerClass}>
+          <SelectCase
+            option={option}
+            setOption={setOption}
+            isClicked={isClicked}
+            setIsClicked={setIsClicked}
+          />
+          <TextareaField
+            inputValue={inputValue}
+            setInputValue={setInputValue}
+            onKeyDown={handleKeyPress}
+          />
+          <DeveloperInfo type="chat" />
+        </form>
+      </div>
     </>
   );
 }

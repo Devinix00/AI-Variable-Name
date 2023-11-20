@@ -16,8 +16,8 @@ function ChatTemplate(): JSX.Element {
       <div ref={containerRef} className={styles.container}>
         <div className={styles.wrapper}>
           <ChatRoom />
-          <AIForm scrollbar={scrollbar} />
         </div>
+        <AIForm scrollbar={scrollbar} />
       </div>
     </>
   );

@@ -1,28 +1,27 @@
 @import "/src/styles/breakPoints";
 @import "/src/styles/mixins";
 
-.backgroundContainer {
+.container {
   position: fixed;
   width: fit-content;
-  bottom: 0;
+  bottom: 0vh;
   transition: bottom 0.3s ease;
-  width: 100vw;
+  left: 50%;
+  transform: translate(-50%);
+  width: 90%;
+  margin: 0 auto;
 
-  .container {
-    width: 90%;
-    margin: 0 auto;
-    @include respond-above("sm") {
-    }
-    @include respond-above("md") {
-    }
-    @include respond-above("lg") {
-    }
-    @include respond-above("xl") {
-      width: 1000px;
-    }
+  @include respond-above("sm") {
+  }
+  @include respond-above("md") {
+  }
+  @include respond-above("lg") {
+  }
+  @include respond-above("xl") {
+    width: 1000px;
+  }
 
-    &.scrollbar {
-      left: calc(50% - 6px);
-    }
+  &.scrollbar {
+    left: calc(50% - 6px);
   }
 }

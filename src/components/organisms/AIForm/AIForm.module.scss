@@ -2,13 +2,13 @@
 @import "/src/styles/mixins";
 
 .container {
-  position: fixed;
+  position: absolute;
   width: fit-content;
   bottom: 0vh;
   transition: bottom 0.3s ease;
   left: 50%;
   transform: translate(-50%);
-  width: 90%;
+  width: calc(90% - 6px);
   margin: 0 auto;
 
   @include respond-above("sm") {

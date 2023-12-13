@@ -22,8 +22,8 @@ function DeveloperInfo({ type }: IProps): JSX.Element {
     <>
       <div className={containerClass}>
         <div className={developedByClass}>Developed by</div>
-        <Developer division="front" who="KitsuNeko" type={type} />
-        <GithubLink type={type} url="https://github.com/KitsuNeko00" />
+        <Developer division="front" who="Devinix" type={type} />
+        <GithubLink type={type} url="https://github.com/Devinix00" />
         <Developer division="back" who="김한규" type={type} />
         <GithubLink type={type} url="https://github.com/Star-kyu" />
       </div>

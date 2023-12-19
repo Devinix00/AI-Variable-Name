@@ -5,7 +5,6 @@ ChatGpt의 API를 이용하여 프로젝트를 진행하였으며,
 <br>
 반응형 디자인으로 제작하였습니다.
 
-링크: https://scintillating-phoenix-b0cf78.netlify.app/
 
 
 ## 초기 화면
